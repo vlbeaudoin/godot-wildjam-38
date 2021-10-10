@@ -12,7 +12,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
-current_level = "res://levels/level1.tscn"
 
 [node name="char" parent="." instance=ExtResource( 2 )]
 position = Vector2( 399.218, 139.168 )

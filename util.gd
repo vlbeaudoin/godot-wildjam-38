@@ -1,9 +1,6 @@
 extends Node2D
 
 
-export var current_level = "res://levels/level0.tscn"
-
-
 func _ready():
 	pass # Replace with function body.
 
@@ -32,7 +29,7 @@ func change_scene(new_scene):
 		print("[ERR] Could not change scene. (Error code: %s)" % err)
 
 func handle_restart():
-	change_scene(current_level)
+	change_scene(self.get_owner().level_path)
 
 func handle_debug():
 	print("[I] Debug!")

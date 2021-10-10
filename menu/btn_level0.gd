@@ -9,6 +9,7 @@ export(String) var level_name = "level0"
 
 ## SIGNALS
 func on_button_down():
+	print("[I] Changing scene to: %s" % level_name)
 	var err = get_tree().change_scene("res://levels/{level}.tscn".format({"level":level_name}))
 	
 	if err != OK:

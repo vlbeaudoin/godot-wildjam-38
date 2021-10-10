@@ -25,6 +25,7 @@ func process_input():
 		handle_menu()
 
 func change_scene(new_scene):
+	print("[I] Changing scene to: %s" % new_scene)
 	var err = get_tree().change_scene(new_scene)
 	
 	if err != OK:

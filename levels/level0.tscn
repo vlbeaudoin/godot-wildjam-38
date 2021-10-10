@@ -11,3 +11,8 @@ __meta__ = {
 
 [node name="char" parent="." instance=ExtResource( 2 )]
 position = Vector2( 211.918, 147.492 )
+
+[node name="TileMap" type="TileMap" parent="."]
+mode = 1
+cell_size = Vector2( 32, 16 )
+format = 1

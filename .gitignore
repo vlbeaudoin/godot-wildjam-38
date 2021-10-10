@@ -1,0 +1,6 @@
+# Godot Serialisations
+api.json
+
+# Binaries
+build/
+*.obj

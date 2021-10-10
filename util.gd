@@ -1,6 +1,8 @@
 extends Node2D
 
 
+onready var level_path = "res://levels/%s.tscn" % self.name
+
 func _ready():
 	pass # Replace with function body.
 
@@ -29,7 +31,7 @@ func change_scene(new_scene):
 		print("[ERR] Could not change scene. (Error code: %s)" % err)
 
 func handle_restart():
-	change_scene(self.get_owner().level_path)
+	change_scene(level_path)
 
 func handle_debug():
 	print("[I] Debug!")

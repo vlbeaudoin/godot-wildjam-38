@@ -1,4 +1,4 @@
 extends Node
 
 
-export(String) var level_path = ""
+onready var level_path = "res://levels/%s.tscn" % self.name

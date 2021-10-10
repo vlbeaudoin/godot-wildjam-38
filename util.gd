@@ -23,7 +23,7 @@ func process_input():
 	if Input.is_action_just_released("menu"):
 		handle_menu()
 
-func change_scene(new_scene):
+func change_scene(new_scene: String):
 	print("[I] Changing scene to: %s" % new_scene)
 	var err = get_tree().change_scene(new_scene)
 	

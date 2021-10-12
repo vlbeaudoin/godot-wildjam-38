@@ -1,14 +1,14 @@
 extends Node2D
 
-
 onready var level_path = "res://levels/%s.tscn" % self.name
 
+# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	add_to_group("level")
 
-
-func _process(delta):
+func _process(_delta):
 	process_input()
+
 
 func process_input():
 	if Input.is_action_just_pressed("toggle_fullscreen"):
@@ -20,21 +20,16 @@ func process_input():
 	if Input.is_action_just_released("debug"):
 		handle_debug()
 	
-	if Input.is_action_just_released("menu"):
+	if Input.is_action_just_pressed("menu"):
 		handle_menu()
 
-func change_scene(new_scene: String):
-	print("[I] Changing scene to: %s" % new_scene)
-	var err = get_tree().change_scene(new_scene)
-	
-	if err != OK:
-		print("[ERR] Could not change scene. (Error code: %s)" % err)
-
 func handle_restart():
-	change_scene(level_path)
+	print("[I] Restarting level")
+	Util.change_scene(level_path)
 
 func handle_debug():
 	print("[I] Debug!")
 
 func handle_menu():
-	change_scene("res://main.tscn")
+	print("[I] Opening menu")
+	Util.change_scene("res://main.tscn")

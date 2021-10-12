@@ -1,15 +1,22 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://menu/btn_level0.gd" type="Script" id=1]
+[ext_resource path="res://menu/btn_level.gd" type="Script" id=1]
 
-[node name="Control" type="Control"]
+[node name="main" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="btn_level0" type="Button" parent="."]
+[node name="levels" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_level0" type="Button" parent="levels"]
 margin_left = 203.354
 margin_top = 132.002
 margin_right = 254.354
@@ -20,7 +27,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="btn_level1" type="Button" parent="."]
+[node name="btn_level1" type="Button" parent="levels"]
 margin_left = 203.354
 margin_top = 160.543
 margin_right = 254.354
